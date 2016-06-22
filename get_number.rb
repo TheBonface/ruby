@@ -16,10 +16,7 @@ puts input.inspect
 puts "i've got a random number for the player to guess."
 puts "can u guess it?"
 target= rand(100)+1
-
-
-num_guesses = 0
-
+num_guesses=0
 #Track weather the player has guessed correctly 
 guessed_it = false
 
@@ -29,6 +26,7 @@ puts "You've got #{10-num_guesses} guesses left."
 print "Make a guess: "
 guess = gets.to_i
 
+num_guesses +=1
 #compare the guess to the target .
 #print the appropriate message .
 
@@ -41,7 +39,8 @@ elsif guess== target
 	puts "you guessed my number in #{num_guesses} guesses!"
 	guessed_it =true
 end
-unless guessed_itp
+unless guessed_it
 	puts "Sorry. you didn't get my number.(it was #{target}.)"
+end 
 end 
 
