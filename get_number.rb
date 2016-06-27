@@ -22,25 +22,25 @@ guessed_it = false
 
 until num_guesses ==10 ||guessed_it
 
-puts "You've got #{10-num_guesses} guesses left."
-print "Make a guess: "
-guess = gets.to_i
+  puts "You've got #{10-num_guesses} guesses left."
+  print "Make a guess: "
+  guess = gets.to_i
 
-num_guesses +=1
-#compare the guess to the target .
-#print the appropriate message .
+  num_guesses +=1
+  #compare the guess to the target .
+  #print the appropriate message .
 
-if guess <target
-	puts "Oops. Your guess was LOW."
-elsif guess > target
-	puts"Ooops your guess was HIGH."
-elsif guess== target
-	puts "Good job , #{name}!"
-	puts "you guessed my number in #{num_guesses} guesses!"
-	guessed_it =true
-end
-unless guessed_it
-	puts "Sorry. you didn't get my number.(it was #{target}.)"
-end 
+  if guess <target
+    puts "Oops. Your guess was LOW."
+  elsif guess > target
+    puts"Ooops your guess was HIGH."
+  elsif guess== target
+    puts "Good job , #{name}!"
+    puts "you guessed my number in #{num_guesses} guesses!"
+    guessed_it =true
+  end
+  unless guessed_it
+    puts "Sorry. you didn't get my number.(it was #{target}.)"
+  end 
 end 
 
